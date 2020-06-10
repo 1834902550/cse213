@@ -27,3 +27,6 @@
 * Array Merge
 * Array Spilt
 * Cyclically Permute
+## Lab Assignment 5
+
+* Array Operation Using Pointer
