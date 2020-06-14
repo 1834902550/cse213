@@ -29,4 +29,27 @@
 * Cyclically Permute
 ## Lab Assignment 5
 
-* Array Operation Using Pointer
+* Array Basic operations Using Pointer:
+  * Decleration
+  * Initialization
+  * Accessing
+  * I/O
+    * Until End Of File
+    * Until User Input is 0
+  * Element Insert
+  * Element Update
+  * Element Search
+  * Element Delete
+  * Maximum
+    * Find 2nd Maximum
+  * Minimum
+    * Find 2nd Minimum
+  * Array Summation
+  * Array Copy
+  * Array Reverse
+  * Compare
+  * Array Merge
+    * Two Array in One Array
+    * Two sorted Array
+  * Array Split
+  * Cyclically permute
