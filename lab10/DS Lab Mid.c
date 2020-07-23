@@ -6,7 +6,108 @@ struct node
     int data;
     Node *next;
 };
+void push_front(int value);
+void push_back(int value);
+void pop_front();
+void pop_back();
+void Head();
+void tail();
+void size();
+void display();
+void empty()
+void menu();
 Node *head;
+
+int main()
+{
+    head=NULL;
+    menu();
+
+}
+void menu()
+{
+    int fv, option,bv;
+    do
+    {
+        system("cls");
+        printf(" 1 - Push Front\n");
+        printf(" 2 - Push Back\n");
+        printf(" 3 - Pop Front\n");
+        printf(" 4 - Pop Back\n");
+        printf(" 5 - Head\n");
+        printf(" 6 - Tail\n");
+        printf(" 7 - Empty\n");
+        printf(" 8 - Display\n");
+        printf(" 9 - Size\n");
+        printf(" 10- Exit\n");
+        printf("Enter Option : ");
+        scanf("%d", &option);
+        if( option == 1)
+        {
+            printf("Enter value to insert in front : ");
+            scanf("%d",&fv);
+            push_front(fv);
+        }
+        else if(option == 2)
+        {
+            printf("Enter value to insert in back: ");
+            scanf("%d",&bv);
+            push_back(bv);
+        }
+        else if (option == 3)
+        {
+            pop_front();
+        }
+        else if (option == 4)
+        {
+           pop_back();
+        }
+        else if(option == 5)
+        {
+            Head();
+        }
+        else if( option == 6)
+        {
+            tail();
+        }
+        else if (option == 7)
+        {
+            empty();
+            getchar();
+            printf("\n\nPress Enter to Continue\n");
+            getchar();
+        }
+         else if (option == 8)
+        {
+            display();
+            getchar();
+            printf("\n\nPress Enter to Continue\n");
+            getchar();
+        }
+                 else if (option == 9)
+        {
+            size();
+            getchar();
+            printf("\n\nPress Enter to Continue\n");
+            getchar();
+        }
+                 else if (option == 10)
+        {
+           exit(0);
+        }
+
+        else
+        {
+            printf("\nPlease enter between 1 to 7  ");
+            exit(0);
+            getchar();
+            printf("\n\nPress Enter to Continue\n");
+            getchar();
+
+        }
+    }
+    while(option != 10);
+}
 void push_front(int value)
 {
     Node *new_node=(Node*)malloc(sizeof(Node));
@@ -131,7 +232,7 @@ void empty()
         printf("The list is not empty\n");
     }
 }
-void front()
+/*void front()
 {
     if(head==NULL)
     {
@@ -157,7 +258,7 @@ void back()
         }
         printf("%d\n",temp->data);
     }
-}
+}*/
 void display()
 {
     if(head==NULL)
@@ -175,20 +276,4 @@ void display()
         printf("%d ",temp->data);
     }
     printf("\n");
-}
-int main()
-{
-    head=NULL;
-    push_front(30);
-    push_front(20);
-    push_front(10);
-    push_back(50);
-
-    display();
-    size();
-    Head();
-    tail();
-    empty();
-    front();
-    back();
 }
